@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Manga Boss</string>
+    <string name="home_fragment_title">Home</string>
+    <string name="manga_details_incorrect_input">Cannot find the manga from this site. Please try another site!</string>
+    <string name="general_error">Problem occurred. Please try again!</string>
+    <string name="home_toast_input_url">Please copy manga URL and click the button!</string>
+    <string name="btn_get_manga">Get manga</string>
+    <string name="menu_next_chapter">Next chapter</string>
+    <string name="details_current_read_chapter">Your last read chapter is %s</string>
+</resources>

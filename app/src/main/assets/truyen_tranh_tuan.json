@@ -1,0 +1,8 @@
+{
+  "siteUrl": "http://truyentranhtuan.com/",
+  "titleTag": "div#main-content h1[itemprop = name]",
+  "summaryTag": "div#manga-summary p",
+  "thumbnailTag": "div.manga-cover > img",
+  "chapterListTag": "div#manga-chapter span.chapter-name a",
+  "imagesTag": "div#viewer img"
+}

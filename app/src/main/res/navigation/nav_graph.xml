@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentHome">
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.comsuon.trumtruyentranh.ui.HomeFragment"
+        android:label="@string/home_fragment_title"
+        tools:layout="">
+        <action
+            android:id="@+id/action_fragmentHome_to_detailsFragment"
+            app:destination="@id/fragmentDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDetails"
+        android:name="com.comsuon.trumtruyentranh.ui.DetailsFragment"
+        tools:layout="">
+        <action
+            android:id="@+id/action_fragmentDetails_to_fragmentReader"
+            app:destination="@id/fragmentReader" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentReader"
+        android:name="com.comsuon.trumtruyentranh.ui.ReaderFragment" />
+</navigation>

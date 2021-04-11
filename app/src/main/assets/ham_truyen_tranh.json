@@ -1,0 +1,8 @@
+{
+  "siteUrl": "http://hamtruyentranh.net/",
+  "titleTag": "h1.title-manga",
+  "summaryTag": "p#tomtattruyen",
+  "thumbnailTag": "div.media-left.cover-detail img",
+  "chapterListTag": "div.content p a",
+  "imagesTag": "div.each-page img"
+}

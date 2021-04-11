@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_fragment_title">Trang chủ</string>
+    <string name="manga_details_incorrect_input">Không tìm thấy manga từ trang này. Vui lòng thử những trang khác!</string>
+    <string name="general_error">Có lỗi xảy ra, vui lòng thử lại!</string>
+    <string name="app_name">Trùm Truyện Tranh</string>
+    <string name="home_toast_input_url">Vui lòng copy địa chỉ truyện và nhấn nút bên dưới!</string>
+    <string name="btn_get_manga">Lấy thông tin manga</string>
+    <string name="menu_next_chapter">Chương kế</string>
+    <string name="details_current_read_chapter">Bạn đang đọc chương %s</string>
+</resources>
