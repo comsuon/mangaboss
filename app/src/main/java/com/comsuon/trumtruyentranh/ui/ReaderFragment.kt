@@ -52,7 +52,7 @@ class ReaderFragment : Fragment() {
 
         vm.currentChapter.observe(viewLifecycleOwner, Observer { chapter ->
             requireActivity().title = chapter.title
-            if (chapter.url.contains(MangaSite.HAM_TRUYEN_TRANH.host)) {
+            if (chapter.url.contains(MangaSite.TRUYEN_TRANH_TUAN.host).not()) {
                 vm.getImageList(chapter, scraperConfigs)
             } else {
                 getHtmlPage(chapter = chapter)

@@ -7,12 +7,14 @@ import kotlinx.coroutines.withContext
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
 import org.jsoup.select.Elements
+import java.net.HttpURLConnection
+import java.net.URL
 
 open class Scraper(val scraperConfigs: ScraperConfigs) {
 
     suspend fun getDetails(mangaUrl: String): MangaDetails =
         withContext(Dispatchers.IO) {
-            val doc = Jsoup.connect(mangaUrl).get()
+            val doc = Jsoup.connect(mangaUrl).userAgent("Chrome").get()
 
             println(doc.toString())
             val mangaTitle = getMagaTitle(doc.select(scraperConfigs.titleTag).first())
@@ -46,7 +48,7 @@ open class Scraper(val scraperConfigs: ScraperConfigs) {
 
     suspend fun getImagesFromChapter(chapterUrl: String): List<String> =
         withContext(Dispatchers.IO) {
-            val doc = Jsoup.connect(chapterUrl).get()
+            val doc = Jsoup.connect(chapterUrl).userAgent("Chrome").get()
 
             doc.select(scraperConfigs.imagesTag).map { imgTag ->
                 imgTag.attr("src")

@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.model.GlideUrl
 import com.comsuon.trumtruyentranh.R
 
 class ImageAdapter(private val imageList: List<String>) :
@@ -27,7 +28,9 @@ class ImageAdapter(private val imageList: List<String>) :
         private val imageView: ImageView = view.findViewById(R.id.imv_image)
 
         fun onBind(path: String) {
-            Glide.with(imageView).load(path).error(R.drawable.sharp_broken_image_white_36dp).into(imageView)
+            val glideUrl = GlideUrl(path) { mapOf(Pair("Referer", "www.nettruyenpro.com")) }
+            Glide.with(imageView).load(glideUrl).error(R.drawable.sharp_broken_image_white_36dp)
+                .into(imageView)
         }
     }
 }

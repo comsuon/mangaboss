@@ -9,6 +9,7 @@ class ScraperProvider {
                 url.contains(MangaSite.HAM_TRUYEN_TRANH.host) -> HamTruyenTranhScraper(
                     scraperConfigs
                 )
+                url.contains(MangaSite.NET_TRUYEN_PRO.host) -> NetTruyenProScraper(scraperConfigs)
                 else -> Scraper(scraperConfigs)
             }
         }

@@ -21,7 +21,11 @@ class MangaService(private val scraperConfigs: ScraperConfigs) : IMangaService {
     }
 
     override suspend fun getImagePathsByChapter(chapterUrl: String): List<String> {
-        return (mScraper as? HamTruyenTranhScraper)?.getImagesFromChapter(chapterUrl) ?: emptyList()
+        return when (mScraper) {
+            is HamTruyenTranhScraper -> mScraper.getImagesFromChapter(chapterUrl)
+            is NetTruyenProScraper -> mScraper.getImagesFromChapter(chapterUrl).map { "http:$it" }
+            else -> emptyList()
+        }
     }
 
 }

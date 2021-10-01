@@ -1,0 +1,8 @@
+{
+  "siteUrl": "http://nettruyenpro.com/",
+  "titleTag": "article h1.title-detail",
+  "summaryTag": "div.detail-content p",
+  "thumbnailTag": "div.col-image img",
+  "chapterListTag": "div.list-chapter nav ul li.row div.chapter a",
+  "imagesTag": "div.reading-detail div.page-chapter img"
+}
