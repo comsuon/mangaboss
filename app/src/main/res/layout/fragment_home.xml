@@ -19,6 +19,31 @@
         android:text="@string/btn_get_manga"
         app:layout_constraintTop_toBottomOf="@id/et_manga_url_input" />
 
+    <TextView
+        android:id="@+id/tv_nettruyen"
+        android:layout_width="180dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/teal_200"
+        android:gravity="center"
+        android:text="@string/text_nettruyenpro"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_get_manga" />
+
+    <TextView
+        android:id="@+id/tv_truyentranhtuan"
+        android:layout_width="180dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/teal_200"
+        android:gravity="center"
+        android:text="@string/text_truyentranhtuan"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_get_manga" />
 
     <TextView
         android:id="@+id/tv_manga_url"
@@ -27,5 +52,5 @@
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_get_manga" />
+        app:layout_constraintTop_toBottomOf="@id/tv_nettruyen" />
 </androidx.constraintlayout.widget.ConstraintLayout>

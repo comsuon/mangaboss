@@ -4,5 +4,6 @@
   "summaryTag": "div#manga-summary p",
   "thumbnailTag": "div.manga-cover > img",
   "chapterListTag": "div#manga-chapter span.chapter-name a",
-  "imagesTag": "div#viewer img"
+  "imagesTag": "div#viewer img",
+  "detailBasePath": "http://truyentranhtuan.com/"
 }

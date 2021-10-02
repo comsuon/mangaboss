@@ -2,6 +2,7 @@ package com.comsuon.trumtruyentranh.repo.network
 
 data class ScraperConfigs(
     val siteUrl: String,
+    val detailBasePath: String,
     val titleTag: String,
     val urlTag: String,
     val summaryTag: String,

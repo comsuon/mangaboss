@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.comsuon.trumtruyentranh.R
 import com.comsuon.trumtruyentranh.ui.utils.Constants
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
 
@@ -34,6 +35,8 @@ class HomeFragment : Fragment() {
         val btn_get_manga = view.findViewById<Button>(R.id.btn_get_manga)
         val et_manga_url = view.findViewById<EditText>(R.id.et_manga_url_input)
         val current_url = view.findViewById<TextView>(R.id.tv_manga_url)
+        val nettruyenpro = view.findViewById<TextView>(R.id.tv_nettruyen)
+        val truyentranhtuan = view.findViewById<TextView>(R.id.tv_truyentranhtuan)
         val currentReadUrl = requireActivity().getSharedPreferences(
             Constants.PREF_KEY,
             Context.MODE_PRIVATE
@@ -48,10 +51,26 @@ class HomeFragment : Fragment() {
 
         btn_get_manga.setOnClickListener {
 
-                val url = et_manga_url.text?.toString() ?: ""
-                goToManga(url)
-            }
+            val url = et_manga_url.text?.toString() ?: ""
+            goToManga(url)
+        }
 
+        tv_nettruyen.setOnClickListener {
+            goToSite("http://nettruyenpro.com/")
+        }
+
+        tv_truyentranhtuan.setOnClickListener {
+            goToSite("http://truyentranhtuan.com/")
+        }
+    }
+
+    private fun goToSite(url: String) {
+        val bundle = Bundle().apply {
+            putString(MangaBrowserFragment.WEB_URL, url)
+        }
+        findNavController().navigate(
+            R.id.action_fragmentHome_to_fragmentBrowser, bundle
+        )
     }
 
     private fun goToManga(url: String) {

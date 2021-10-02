@@ -8,4 +8,5 @@
     <string name="btn_get_manga">Lấy thông tin manga</string>
     <string name="menu_next_chapter">Chương kế</string>
     <string name="details_current_read_chapter">Bạn đang đọc chương %s</string>
+    <string name="menu_read">Đọc truyện</string>
 </resources>

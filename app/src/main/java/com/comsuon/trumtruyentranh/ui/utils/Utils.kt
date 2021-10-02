@@ -35,4 +35,4 @@ fun Context.loadJSONFromAsset(fileName: String?): String? {
 }
 
 fun String.getScraperConfigPathFromUrl(): String? =
-    enumValues<MangaSite>().firstOrNull { site -> this.contains(site.host) }?.json
+    enumValues<MangaSite>().find { site -> this.contains(site.host) }?.json

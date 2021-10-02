@@ -6,5 +6,8 @@
     <string name="home_toast_input_url">Please copy manga URL and click the button!</string>
     <string name="btn_get_manga">Get manga</string>
     <string name="menu_next_chapter">Next chapter</string>
+    <string name="menu_read">Read this</string>
     <string name="details_current_read_chapter">Your last read chapter is %s</string>
+    <string name="text_nettruyenpro" translatable="false">Nettruyenpro</string>
+    <string name="text_truyentranhtuan" translatable="false">Truyentranhtuan</string>
 </resources>

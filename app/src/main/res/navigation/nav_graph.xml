@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_fragmentHome_to_detailsFragment"
             app:destination="@id/fragmentDetails" />
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentBrowser"
+            app:destination="@id/mangaBrowserFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragmentDetails"
@@ -25,4 +28,12 @@
     <fragment
         android:id="@+id/fragmentReader"
         android:name="com.comsuon.trumtruyentranh.ui.ReaderFragment" />
+    <fragment
+        android:id="@+id/mangaBrowserFragment"
+        android:name="com.comsuon.trumtruyentranh.ui.MangaBrowserFragment"
+        android:label="MangaBrowserFragment" >
+        <action
+            android:id="@+id/action_mangaBrowserFragment_to_fragmentDetails"
+            app:destination="@id/fragmentDetails" />
+    </fragment>
 </navigation>
