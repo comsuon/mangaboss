@@ -1,9 +1,9 @@
 {
-  "siteUrl": "http://nettruyenpro.com/",
+  "siteUrl": "http://nettruyenmoi.com/",
   "titleTag": "article h1.title-detail",
   "summaryTag": "div.detail-content p",
   "thumbnailTag": "div.col-image img",
   "chapterListTag": "div.list-chapter nav ul li.row div.chapter a",
   "imagesTag": "div.reading-detail div.page-chapter img",
-  "detailBasePath": "http://nettruyenpro.com/truyen-tranh/"
+  "detailBasePath": "http://nettruyenmoi.com/truyen-tranh/"
 }

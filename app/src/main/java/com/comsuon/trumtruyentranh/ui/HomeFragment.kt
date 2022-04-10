@@ -56,7 +56,7 @@ class HomeFragment : Fragment() {
         }
 
         tv_nettruyen.setOnClickListener {
-            goToSite("http://nettruyenpro.com/")
+            goToSite("http://nettruyenmoi.com/")
         }
 
         tv_truyentranhtuan.setOnClickListener {

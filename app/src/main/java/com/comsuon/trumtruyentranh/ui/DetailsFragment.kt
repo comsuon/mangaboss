@@ -84,7 +84,11 @@ class DetailsFragment : Fragment() {
 
                 tvTitle.text = title
                 tvSummary.text = summary
-                Glide.with(this@DetailsFragment).load(thumbnailUrl).into(imvThumbnail)
+                val thumbnail = if (thumbnailUrl.contains("http").not()) {
+                    "http://${thumbnailUrl}"
+                } else thumbnailUrl
+
+                Glide.with(this@DetailsFragment).load(thumbnail).into(imvThumbnail)
                 requireActivity().title = title
 
                 val adapter = ChapterAdapter(chapters, object : ChapterClickListener {
