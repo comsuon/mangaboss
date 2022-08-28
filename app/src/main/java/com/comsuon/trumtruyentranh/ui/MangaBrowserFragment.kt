@@ -1,5 +1,6 @@
 package com.comsuon.trumtruyentranh.ui
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -32,15 +33,17 @@ class MangaBrowserFragment : Fragment() {
         }
     }
 
+    @SuppressLint("InflateParams")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         mRoot = inflater.inflate(R.layout.fragment_browser, null, false)
         return mRoot
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mBrowser = mRoot.findViewById(R.id.webview)
@@ -90,7 +93,13 @@ class MangaBrowserFragment : Fragment() {
     }
 
     private fun isMangaDetailLink(url: String?): Boolean {
-        if (mScraperConfigs == null || url.isNullOrEmpty()) return false
+        if (url.isNullOrEmpty()) return false
+
+        //retry getting config from detail side url
+        if (mScraperConfigs == null) {
+            mScraperConfigs = context?.getScraperConfigsFromUrl(url)
+        }
+        if (mScraperConfigs == null) return false
 
         val strippedPath = url.replace("www.","").removePrefix(mScraperConfigs!!.detailBasePath)
         val parts = strippedPath.removeSuffix("/").split("/")
